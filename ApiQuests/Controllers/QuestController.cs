@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ApiQuests.Model;
+using Microsoft.AspNetCore.Authorization;
 namespace ApiQuests.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class QuestController : ControllerBase
     {
         private readonly IHttpClientFactory _IHttpClientFactory;
