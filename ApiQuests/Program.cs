@@ -57,6 +57,13 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false
     };
 });
+
+// Configura o MemoryCache
+builder.Services.AddMemoryCache();
+
+// Adiciona suporte para controladores
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
